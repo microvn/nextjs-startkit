@@ -9,7 +9,7 @@
 </p>
 
 # Landing page template
-``````
+
 ## Starting template with:
 
 - React.js
