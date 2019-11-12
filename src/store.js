@@ -10,7 +10,6 @@ const middleWare = [];
 const sagaMiddleware = createSagaMiddleware();
 middleWare.push(sagaMiddleware);
 
-
 // Logger Middleware. This always has to be last
 const loggerMiddleware = createLogger({
 	predicate: () => process.env.NODE_ENV === "development" && typeof window !== 'undefined'
@@ -22,7 +21,7 @@ const enhancers = compose(
 	typeof window !== 'undefined' && process.env.NODE_ENV !== 'production'
 		? window.devToolsExtension && window.devToolsExtension()
 		: f => f
-)
+);
 
 const createStoreWithMiddleware = applyMiddleware(...middleWare)(createStore)
 

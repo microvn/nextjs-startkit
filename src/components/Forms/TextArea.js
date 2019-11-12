@@ -3,7 +3,7 @@ import Error from "./Error"
 import Label from "./Label"
 
 const TextArea = ({type, id, label, error, value = '', disable, height, onChange, onBlur, className, ...props}) => (
-	<div className="form-group">
+	<div>
 		<Label htmlFor={id} error={error}>
 			{label}
 		</Label>

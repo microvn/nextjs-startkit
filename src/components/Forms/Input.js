@@ -3,7 +3,7 @@ import Error from "./Error"
 import Label from "./Label"
 
 const TextInput = ({type, max, id, label, error, value = '', disable, onChange, className, ...props}) => (
-	<div className="form-group">
+	<div>
 		<Label htmlFor={id}>
 			{label}
 		</Label>
@@ -17,7 +17,6 @@ const TextInput = ({type, max, id, label, error, value = '', disable, onChange, 
 			checked={!!value}
 			{...props}
 		/>
-
 		<Error id={id} error={error}/>
 	</div>
 );

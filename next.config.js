@@ -1,7 +1,8 @@
-const path = require('path')
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
-const withSass = require('@zeit/next-sass')
-const webpack = require('webpack')
+const path = require('path');
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+const FilterWarningsPlugin = require('webpack-filter-warnings-plugin');
+const withSass = require('@zeit/next-sass');
+const webpack = require('webpack');
 
 module.exports = withSass({
 	distDir: '../.dist',
@@ -54,14 +55,19 @@ module.exports = withSass({
 			include: path.resolve(__dirname, '../src'),
 		});
 
+		config.plugins.push(
+			new FilterWarningsPlugin({
+				exclude: /mini-css-extract-plugin[^]*Conflicting order between:/,
+			}),
+		);
 
 		config.plugins.push(
 			new webpack.ProvidePlugin({
 				'$': 'jquery',
 				'jQuery': 'jquery',
 			})
-		)
+		);
 
 		return config
 	}
-})
+});

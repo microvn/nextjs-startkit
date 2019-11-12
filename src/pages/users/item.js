@@ -23,7 +23,7 @@ class Index extends React.Component {
 	};
 
 	render() {
-		const {index, item, Language} = this.props;
+		const {index, item} = this.props;
 		return (
 			!this.state.isDeleted ? (
 				<tr>
@@ -32,11 +32,12 @@ class Index extends React.Component {
 					<td>{item.email}</td>
 					<td>
 						<div className="btn-group">
-							<Link prefetch href={`/users/edit?id=${item.id}`} as={`/users/edit/${item.id}`}>
+							<Link href={`/users/edit?id=${item.id}`} as={`/users/edit/${item.id}`}>
 								<a className="label label-info">Edit</a>
-							</Link>
+							</Link> &nbsp;
 							<a onClick={this._delete(item.id)}
-								 className="label label-danger">Delete</a>
+								 className="label label-danger">Delete
+							</a>
 						</div>
 					</td>
 				</tr>) : null

@@ -5,4 +5,3 @@ static/sw.js
 *lock.json
 yarn.lock
 .idea
-/src/config/index.js
