@@ -1,0 +1,57 @@
+{
+  "name": "next-base",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://gitlab.blogtamsu.org/microvn/nextjs-base-v1"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node server",
+    "build": "next build src",
+    "start": "next build src&&cross-env NODE_ENV=production node server"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@opuscapita/react-filemanager": "^1.0.12",
+    "@opuscapita/react-filemanager-connector-node-v1": "^1.0.12",
+    "@zeit/next-css": "^0.2.0",
+    "@zeit/next-sass": "^0.2.0",
+    "express": "^4.16.3",
+    "http-proxy-middleware": "^0.18.0",
+    "lodash-uuid": "0.0.3",
+    "lodash.flowright": "3.5.0",
+    "next": "6.1.2",
+    "next-redux-saga": "3.0.0-beta.2",
+    "next-redux-wrapper": "^2.0.0",
+    "next-routes": "^1.4.2",
+    "node-sass": "^4.9.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.0",
+    "react-cookie": "^3.0.4",
+    "react-dom": "^16.5.0",
+    "react-froala-wysiwyg": "2.9.3",
+    "react-helmet": "^5.2.0",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-saga": "^0.16.0"
+  },
+  "devDependencies": {
+    "classnames": "^2.2.6",
+    "cookie": "^0.3.1",
+    "cookie-parser": "^1.4.3",
+    "cross-env": "^5.2.0",
+    "currency.js": "^1.1.4",
+    "formik": "^0.11.11",
+    "froala-editor": "^2.8.5",
+    "jquery": "^3.3.1",
+    "js-cookie": "^2.2.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.22.2",
+    "next-cookies": "^1.0.2",
+    "react-google-maps": "^9.4.5",
+    "react-notify-toast": "^0.5.0",
+    "react-select": "^2.0.0-beta.7",
+    "sw-precache-webpack-plugin": "^0.11.4",
+    "yup": "0.23.0"
+  }
+}
