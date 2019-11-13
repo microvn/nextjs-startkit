@@ -1,7 +1,7 @@
 import 'isomorphic-fetch'
 import React from 'react'
-import Form from './../../containers/users/form'
-import mocks from './../../containers/users/mocks'
+import Form from './form'
+import mocks from './mocks'
 import Loading from "../../components/Loading"
 
 class Index extends React.Component {

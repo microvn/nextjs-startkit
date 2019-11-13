@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from "next/link"
 import {connect} from "react-redux";
-import {loadUsers} from "../../containers/users/actions"
+import {loadUsers} from "./actions"
 import {bindActionCreators} from "redux"
-import Record from "../../containers/users/item"
+import Record from "./item"
 import Loading from "../../components/Loading"
 
 class Index extends React.Component {

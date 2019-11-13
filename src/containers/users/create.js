@@ -1,5 +1,5 @@
 import React from 'react'
-import UserForm from './../../containers/users/form'
+import UserForm from './form'
 
 class Index extends React.Component {
 
