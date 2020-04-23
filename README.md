@@ -48,14 +48,16 @@ Because when nextjs builded config will public and then dont write secrect key i
 ```
 
 
-## SSR AND SEO
+## SSR AND SEO ( Google Bot, Facebook Index OG,etc...)
 
+```
 Please pass data for title, meta before UI rendered. 
 Example /src/pages/users/index.js
+```
 
 ## How to use (local)
 
-```javascript
+```
 Install Dependencies
 npm i
 ```
