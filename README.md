@@ -10,7 +10,7 @@
 
 This project helps you learn server side-side reactjs quickly, does not apply to people who have just learned Reactjs.
 
-1. understand CSR (Client-Side) and SSR (Server-Side) correctly
+1. Understand CSR (Client-Side) and SSR (Server-Side) correctly
 2. Don't waste time learning about static resources (Image, CSS)
 3. Jquery support (optional)
 4. Can use both React Context or Redux, Redux Saga
