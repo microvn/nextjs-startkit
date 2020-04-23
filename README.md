@@ -80,7 +80,7 @@ Docker build take faster for deploy production
 
 ```javascript
 docker build -t nextjs_image .
-docker run -d -v /home/path_to_project:/home/path_to_project -p 4000:4000 --name nextjs_container nextjs_image
+docker run -d -v /home/path_to_project:/home/source -p 4000:4000 --name nextjs_container nextjs_image
 ```
 
 ## Configuration
