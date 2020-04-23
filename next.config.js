@@ -3,6 +3,7 @@ const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const FilterWarningsPlugin = require('webpack-filter-warnings-plugin');
 const withSass = require('@zeit/next-sass');
 const webpack = require('webpack');
+const {parsed: Env} = require('dotenv').config();
 
 module.exports = withSass({
 	distDir: '../.dist',
@@ -66,6 +67,10 @@ module.exports = withSass({
 				'$': 'jquery',
 				'jQuery': 'jquery',
 			})
+		);
+
+		config.plugins.push(
+			new webpack.EnvironmentPlugin(Env)
 		);
 
 		return config

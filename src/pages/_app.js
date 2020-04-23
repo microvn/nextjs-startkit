@@ -5,6 +5,8 @@ import App from "next/app";
 import flowRight from 'lodash.flowright'
 import withRedux from "next-redux-wrapper";
 import Store from "../store";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 class MyApp extends App {
 
@@ -20,7 +22,11 @@ class MyApp extends App {
 		const {Component, pageProps, store} = this.props;
 		return (
 			<Provider store={store}>
-				<Component {...pageProps}/>
+				<div className="wrapper">
+					<Header/>
+					<Component {...pageProps}/>
+					<Footer/>
+				</div>
 			</Provider>
 		);
 	}

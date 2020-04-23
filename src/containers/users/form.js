@@ -22,8 +22,6 @@ const UserEdit = props => {
 		setErrors
 	} = props;
 
-
-	console.log(values);
 	return (
 		<div className="row">
 			<div className="col-md-6 col-md-push-3">

@@ -2,7 +2,6 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const next = require('next');
 const proxy = require('http-proxy-middleware');
-const Configs = require('./src/config/index');
 const routes = require('./src/routes');
 
 const port = parseInt(process.env.PORT, 10) || 4000;
@@ -22,7 +21,7 @@ const handle = routes.getRequestHandler(app);
 app.prepare().then(() => {
 	const server = express();
 	server.use(cookieParser());
-	server.use('/api', proxy({target: dev ? Configs.api_dev : Configs.api_prod, changeOrigin: true, logLevel: 'debug'}));
+	server.use('/api', proxy({target: dev ? process.env.API_DEV : process.env.API_PROD, changeOrigin: true, logLevel: 'debug'}));
 	// server.use(authChecker);
 	server.use(handle);
 	server.listen(port, (err) => {

@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from "next/link"
+import Head from "next/head"
 import {connect} from "react-redux";
 import {loadUsers} from "../../containers/users/actions"
 import {bindActionCreators} from "redux"
@@ -25,9 +26,14 @@ class Index extends React.Component {
 		return (
 			loaded && !error ? (
 				<div className="row">
-					<div className="col-md-12">
+					<Head>
+						<title>This is title</title>
+						<meta property="og:title" content="This is title"/>
+						<meta property="og:description" content="This is Description"/>
+					</Head>
+					<div className="user-page">
 						<Link href={`/users/create`}>
-							<a className="label label-info">Create</a>
+							<a className="label label-info">Create New User</a>
 						</Link>
 						<table className="table table-sm">
 							<thead>
@@ -35,6 +41,7 @@ class Index extends React.Component {
 								<th>#</th>
 								<th>Name</th>
 								<th>Email</th>
+								<th>Action</th>
 							</tr>
 							</thead>
 							<tbody>
