@@ -37,14 +37,14 @@ See more: https://nextjs.org/docs/getting-started
 
 Just make sure that you reboot the server when updating .env file 
 You can access your .env variables by deconstructing 'process.env' object, both on client and server
+Because when Next builded config will public and then dont write secret key in this file. you can use process.env.SECRET_KEY
 
 ```
 On server only use process.env (demo in server.js)
 ```
 
 ```
-On client (reactjs) only public config in file /src/config/index.js
-Because when nextjs builded config will public and then dont write secrect key in this file. you can use process.env.SECRET_KEY 
+On client (reactjs) only public config in file /src/config/index.js 
 ```
 
 
