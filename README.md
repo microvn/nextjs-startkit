@@ -1,9 +1,9 @@
-<h1 align="center">React + Next.js (9) + Redux + Redux Saga + Scss + Typescript Starter + Docker</h1>
+<h1 align="center">React 17 + Next.js (10) + Redux + Redux Saga + Scss + Typescript Starter + Docker</h1>
 
 <p align="center">
   <a href="https://www.typescriptlang.org/" target="_blank"><img src="https://img.shields.io/badge/Typescript-v3.7.2-blue.svg?logo=TypeScript"></a>
-  <a href="https://nextjs.org/" target="_blank"><img src="https://img.shields.io/badge/Next.js-v9.1.1-blueviolet.svg"></a>
-  <a href="https://reactjs.org/" target="_blank"><img src="https://img.shields.io/badge/React-v16.5.0-%238DD6F9.svg?logo=React"></a>
+  <a href="https://nextjs.org/" target="_blank"><img src="https://img.shields.io/badge/Next.js-v10.0.7-blueviolet.svg"></a>
+  <a href="https://reactjs.org/" target="_blank"><img src="https://img.shields.io/badge/React-v17.0.1-%238DD6F9.svg?logo=React"></a>
   <a href="https://github.com/prettier/prettier" target="_blank"><img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg"></a>
   <a href="https://github.com/codica2" target="_blank"><img src="https://img.shields.io/badge/licence-MIT-green.svg" /></a>
 </p>
