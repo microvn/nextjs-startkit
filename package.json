@@ -2,7 +2,7 @@
   "name": "next-base",
   "version": "1.0.0",
   "repository": {
-    "url": "https://github.com/microvnhaxor/nextjs-startkit.git"
+    "url": "https://github.com/microvn/nextjs-startkit.git"
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development node server",
@@ -25,14 +25,15 @@
     "next-routes": "^1.4.2",
     "node-sass": "^4.9.2",
     "prop-types": "^15.6.2",
-    "react": "^16.5.0",
+    "react": "^17.0.1",
     "react-cookie": "^3.0.4",
     "react-dom": "^16.5.0",
     "react-helmet": "^5.2.0",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
-    "redux-saga": "^0.16.0"
+    "redux-saga": "^0.16.0",
+    "webpack": "4.46.0"
   },
   "devDependencies": {
     "classnames": "^2.2.6",

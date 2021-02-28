@@ -25,7 +25,7 @@ const enhancers = compose(
 
 const createStoreWithMiddleware = applyMiddleware(...middleWare)(createStore)
 
-export default initialState => {
+const store = (initialState) => {
 	const store = createStoreWithMiddleware(rootReducer, initialState, enhancers)
 
 	store.runSagaTask = () => {
@@ -36,3 +36,5 @@ export default initialState => {
 
 	return store;
 }
+
+export default store

@@ -5,8 +5,10 @@ import App from "next/app";
 import flowRight from 'lodash.flowright'
 import withRedux from "next-redux-wrapper";
 import Store from "../store";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import MainLayout from './_layout';
+import Configs from '../config';
+import Router from "next/router"
+import './_style.scss';
 
 class MyApp extends App {
 
@@ -19,15 +21,16 @@ class MyApp extends App {
 	}
 
 	render() {
-		const {Component, pageProps, store} = this.props;
+		const {Component, pageProps, Language, Csrf, store} = this.props;
+		const Layout = Component.Layout || MainLayout;
+
 		return (
 			<Provider store={store}>
-				<div className="wrapper">
-					<Header/>
-					<Component {...pageProps}/>
-					<Footer/>
-				</div>
+				<Layout Language={Language}>
+					<Component {...pageProps} Csrf={Csrf} Language={Language}/>
+				</Layout>
 			</Provider>
+
 		);
 	}
 

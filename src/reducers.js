@@ -2,6 +2,8 @@ import {combineReducers} from 'redux';
 
 import Users from './containers/users/reducers'
 
-export default combineReducers({
+const combined = () => ({
 	users: Users
 })
+
+export default combined
