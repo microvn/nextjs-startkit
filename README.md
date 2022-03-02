@@ -1,8 +1,7 @@
-<h1 align="center">React 17 + Next.js (10) + Redux + Redux Saga + Scss + Typescript Starter + Docker</h1>
+<h1 align="center">Next.js (12) Custom Server + React 17 + Redux + Redux Saga + Scss + Typescript Starter + Docker</h1>
 
 <p align="center">
-  <a href="https://www.typescriptlang.org/" target="_blank"><img src="https://img.shields.io/badge/Typescript-v3.7.2-blue.svg?logo=TypeScript"></a>
-  <a href="https://nextjs.org/" target="_blank"><img src="https://img.shields.io/badge/Next.js-v10.0.7-blueviolet.svg"></a>
+  <a href="https://nextjs.org/" target="_blank"><img src="https://img.shields.io/badge/Next.js-v12-blueviolet.svg"></a>
   <a href="https://reactjs.org/" target="_blank"><img src="https://img.shields.io/badge/React-v17.0.1-%238DD6F9.svg?logo=React"></a>
   <a href="https://github.com/prettier/prettier" target="_blank"><img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg"></a>
   <a href="https://github.com/codica2" target="_blank"><img src="https://img.shields.io/badge/licence-MIT-green.svg" /></a>
@@ -22,7 +21,7 @@ See more: https://nextjs.org/docs/getting-started
 
 ## Starting template with:
 - React.js 
-- Next.js ( latest ) 
+- Next.js ( latest ) - Custom server (express)
 - Typescript
 - SCSS
 - Redux
@@ -31,6 +30,20 @@ See more: https://nextjs.org/docs/getting-started
 - Yup Validator
 - Prettier
 - Docker
+- Reverse Proxy API for CORS Domain
+
+
+## Changelog 
+
+* 02/03/2022
+  - Update React 17 && Next 12
+  - Remove Webpack4, Upgrade Webpack5
+  - Remove Next-CSS, Next-SASS
+  - Update .ENV configuration with Server And Client
+
+
+* 28/12/2021
+	- Update React 17 && Next 10
 
 
 ## Config Environment And Secure
@@ -40,11 +53,7 @@ You can access your .env variables by deconstructing 'process.env' object, both 
 Because when Next builded config will public and then dont write secret key in this file. you can use process.env.SECRET_KEY
 
 ```
-On server only use process.env (demo in server.js)
-```
-
-```
-On client (reactjs) only public config in file /src/config/index.js 
+Can use process.env.ENV_KEY
 ```
 
 
