@@ -1,4 +1,4 @@
-import Yup from 'yup';
+import * as Yup from 'yup';
 import React from 'react'
 import Router from "next/router"
 import {withFormik} from 'formik';
@@ -66,7 +66,7 @@ const MyEnhancedForm = withFormik({
 
 		try {
 			if (payload.id) {
-			 	// Something Create
+				// Something Create
 			} else {
 				// Something Update
 			}
