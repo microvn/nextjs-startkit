@@ -6,7 +6,6 @@ import flowRight from 'lodash.flowright'
 import withRedux from "next-redux-wrapper";
 import Store from "../store";
 import MainLayout from './_layout';
-import './_style.scss';
 import {SessionProvider} from "next-auth/react"
 
 class MyApp extends App {
