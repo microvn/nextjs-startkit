@@ -8,7 +8,7 @@ services:
     container_name: next-test-web
     restart: always
     networks:
-      - app-next-test-network
+      - next-test-network
     ports:
       - 4344:4344
     volumes:
