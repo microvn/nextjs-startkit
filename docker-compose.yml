@@ -1,0 +1,29 @@
+version: "3.5"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: next-test-web
+    restart: always
+    depends_on:
+      - api
+    links:
+      - api
+    networks:
+      - app-next-test-network
+    ports:
+      - 4344:4344
+    volumes:
+      - /home/next-test:/home/next-test
+      - /home/next-test/node_modules
+      - /home/next-test/.dist
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+      - PORT=4344
+networks:
+  next-test-network:
+    driver: bridge
