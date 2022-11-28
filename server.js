@@ -22,7 +22,7 @@ const handle = routes.getRequestHandler(app);
 app.prepare().then(() => {
 	const server = express();
 	server.use(cookieParser());
-	server.use('/api', proxy({target: dev ? process.env.API_DEV : process.env.API_PROD, changeOrigin: true, logLevel: 'debug'}));
+	// server.use('/api', proxy({target: dev ? process.env.API_DEV : process.env.API_PROD, changeOrigin: true, logLevel: 'debug'}));
 	// server.use(authChecker);
 	server.use(handle);
 	server.listen(port, (err) => {

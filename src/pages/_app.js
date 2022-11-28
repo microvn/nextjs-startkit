@@ -6,9 +6,8 @@ import flowRight from 'lodash.flowright'
 import withRedux from "next-redux-wrapper";
 import Store from "../store";
 import MainLayout from './_layout';
-import Configs from '../config';
-import Router from "next/router"
 import './_style.scss';
+import {SessionProvider} from "next-auth/react"
 
 class MyApp extends App {
 
@@ -21,16 +20,17 @@ class MyApp extends App {
 	}
 
 	render() {
-		const {Component, pageProps, Language, Csrf, store} = this.props;
+		const {Component, pageProps, session, Language, Csrf, store} = this.props;
 		const Layout = Component.Layout || MainLayout;
 
 		return (
-			<Provider store={store}>
-				<Layout Language={Language}>
-					<Component {...pageProps} Csrf={Csrf} Language={Language}/>
-				</Layout>
-			</Provider>
-
+			<SessionProvider session={session}>
+				<Provider store={store}>
+					<Layout Language={Language}>
+						<Component {...pageProps} Csrf={Csrf} Language={Language}/>
+					</Layout>
+				</Provider>
+			</SessionProvider>
 		);
 	}
 

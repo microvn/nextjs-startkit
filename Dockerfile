@@ -8,7 +8,7 @@ RUN npm cache clean --force \
   && npm install
 
 #ENV NODE_ENV production
-ENV PORT 4000
-EXPOSE 4000
+ENV PORT 4344
+EXPOSE 4344
 
 CMD [ "npm", "start"]
