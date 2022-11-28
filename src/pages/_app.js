@@ -23,7 +23,7 @@ class MyApp extends App {
 		const Layout = Component.Layout || MainLayout;
 
 		return (
-			<SessionProvider session={session}>
+			<SessionProvider session={session} baseUrl="https://next-auth1.microvn.net">
 				<Provider store={store}>
 					<Layout Language={Language}>
 						<Component {...pageProps} Csrf={Csrf} Language={Language}/>
