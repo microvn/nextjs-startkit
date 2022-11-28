@@ -20,6 +20,7 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=4344
+      - NEXTAUTH_URL=https://next-auth1.microvn.net/api/auth
 networks:
   next-test-network:
     driver: bridge
