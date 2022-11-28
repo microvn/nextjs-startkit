@@ -5,7 +5,8 @@ WORKDIR /home/source/
 COPY package*.json ./
 
 RUN npm cache clean --force \
-  && npm install
+  && npm install -g node-gyp \
+  && npm install --unsafe-perm=true
 
 #ENV NODE_ENV production
 ENV PORT 4344
