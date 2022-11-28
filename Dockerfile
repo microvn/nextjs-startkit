@@ -1,6 +1,6 @@
 FROM node:11.10-alpine
 
-WORKDIR /home/source/
+WORKDIR /home/next-test/
 
 COPY package*.json ./
 
