@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development node server",
     "build": "next build src",
-    "start": "cross-env NODE_ENV=production node server"
+    "start": "cross-env next build src && NODE_ENV=production node server"
   },
   "license": "MIT",
   "dependencies": {
